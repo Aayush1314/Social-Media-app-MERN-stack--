@@ -1,5 +1,4 @@
 var mongoose = require("mongoose")
-const { update } = require("./posts")
 
 const userSchema = mongoose.Schema({
     name:{
@@ -12,13 +11,11 @@ const userSchema = mongoose.Schema({
         trim : true,
         required: true
     },
-    hashed_password:{
+    password:{
         type: String,
         required: true
     },
-    
-    salt: String,
-    
+
     created:{
         type: Date,
         default: Date.now
